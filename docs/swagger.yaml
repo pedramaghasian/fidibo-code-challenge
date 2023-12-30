@@ -1,0 +1,36 @@
+basePath: /api
+definitions:
+  response.Response:
+    properties:
+      code:
+        type: integer
+      data: {}
+      status:
+        type: string
+    type: object
+host: localhost:8888
+info:
+  contact: {}
+  description: A Book service API
+  title: Book Service API
+  version: "1.0"
+paths:
+  /books:
+    get:
+      description: Return the books.
+      parameters:
+      - description: book search
+        in: query
+        name: search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Response'
+      summary: Search For Books By Name.
+      tags:
+      - books
+swagger: "2.0"

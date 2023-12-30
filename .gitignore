@@ -1,0 +1,7 @@
+.idea/
+
+/config/local.json
+/config/production.json
+
+.vscode
+__debug*
